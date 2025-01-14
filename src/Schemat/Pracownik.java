@@ -1,13 +1,25 @@
 package Schemat;
 
-abstract public class Pracownik
+import java.io.Serializable;
+
+abstract public class Pracownik implements Serializable
 {
-    private String nazwisko;
-    private String imie;
-    private String pesel;
-    private String telefon;
-    private int pensja;
-    private String stanowisko;
+    protected String nazwisko;
+    protected String imie;
+    protected String pesel;
+    protected String telefon;
+    protected String pensja;
+    protected String stanowisko;
+
+    public Pracownik(String imie, String nazwisko, String pensja, String pesel, String stanowisko, String telefon)
+    {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.pensja = pensja;
+        this.pesel = pesel;
+        this.stanowisko = stanowisko;
+        this.telefon = telefon;
+    }
 
     public String getNazwisko()
     {
@@ -49,12 +61,12 @@ abstract public class Pracownik
         this.telefon = telefon;
     }
 
-    public int getPensja()
+    public String getPensja()
     {
         return pensja;
     }
 
-    public void setPensja(int pensja)
+    public void setPensja(String pensja)
     {
         this.pensja = pensja;
     }

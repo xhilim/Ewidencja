@@ -1,8 +1,9 @@
 package Views;
 
-import Schemat.Pracownik;
 import Schemat.Handlowiec;
 import Schemat.Dyrektor;
+import Schemat.Pracownik;
+
 public class MainView
 {
     public void printMenu()
@@ -15,19 +16,22 @@ public class MainView
                 "Wybór>");
     }
 
-    public void HandlowiecWyswietl(Handlowiec p)
+    public void Wyswietl(Handlowiec p)
     {
+        System.out.println("----------------------------");
         System.out.println("Identyfikator PESEL     :   " + p.getPesel()
                 +"\nImię    :   " + p.getImie()
                 +"\nNazwisko    :   " + p.getStanowisko()
                 +"\nWynagrodzenie :    " + p.getPensja()
                 +"\nTelefon służbowy numer  :   " + p.getTelefon()
                 +"\nProwizja (%)   :  "  + p.getProwizja());
+        System.out.println("----------------------------");
 
     }
 
-    public void DyrektorWyswietl(Dyrektor p)
+    public void Wyswietl(Dyrektor p)
     {
+        System.out.println("----------------------------");
         System.out.println("Identyfikator PESEL     :   " + p.getPesel()
                 +"\nImię    :   " + p.getImie()
                 +"\nNazwisko    :   " + p.getStanowisko()
@@ -36,6 +40,10 @@ public class MainView
                 +"\nDodatek służbowy (zł)   :  "  + p.getDodatekSluzbowy()
                 +"\nKarta służbowa numer    :    " + p.getNumerKarty()
                 +"\nLimit kosztów/miesiąc (zł)    :    " + p.getLimitKosztow());
+        System.out.println("----------------------------");
 
     }
+
+
+
 }
